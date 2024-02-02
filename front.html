@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protfolio</title>
+    <link rel="stylesheet" href="front.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0504c6a824.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bar">
+      <a class="active" href="#first">Home</a>
+      <a href="#second">About</a>
+      <a href="#services">Services</a>
+      <a href="#protfolio1">Portfolio</a>
+    </div>
+
+    <section id="first">
+      <div class="info">
+        <h3><span class="auto-type"></span></h3>
+        <h1>Hi,I'm Suman</h1>
+        <br />
+        <h2>Maharjan from Kathmandu</h2>
+        <br />
+      </div>
+      <div class="btn1">
+        <a href="">Resume</a>
+      </div>
+      <div class="btn2">
+        <a href="#protfolio1">Protfolio</a>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/suman.maharjan.92123/" target="_blank"
+          ><i class="fa fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/maharjan_suman7/?hl=en"
+          target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+    </section>
+
+    <!--about me section-->
+    <section id="second">
+      <div class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col1">
+              <img src="../image/A.jpg" alt="" />
+            </div>
+            <div class="col2">
+              <h1 class="subtitle">About Me</h1>
+              <p>
+                Hello, I'm Suman Maharjan, a student with a passion for front
+                end . Through dedication and a relentless pursuit of excellence,
+                I've honed my skills in front end developer and UI/UX developer.
+                With a deep commitment to quality and a love for solving design
+                challenges, I've had the privilege of working on projects that
+                not only reflect my expertise but also make a meaningful impact.
+                I believe that every project is an opportunity to innovate and
+                inspire. Welcome to my portfolio, where you can explore a
+                curated selection of my work.
+              </p>
+
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('experience')">
+                  Experience
+                </p>
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-content active-tab" id="skills">
+                <ul>
+                  <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                  <li><span>Web Designing</span><br />Designing Webpages</li>
+                  <li>
+                    <span>Javascript</span><br />Design Responsive Webpages
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="experience">
+                <ul>
+                  <li><span>2023- Current</span><br />SEO</li>
+                  <li><span>2022-2023</span><br />Web Designing</li>
+                  <li><span>2021-2022</span><br />Content Writing</li>
+                </ul>
+              </div>
+              <div class="tab-content" id="education">
+                <ul>
+                  <li><span>2021-2024</span><br />BCA in ACHS</li>
+                  <li>
+                    <span>2020</span><br />Computer Science from Trinity College
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+        function opentab(tabname) {
+          for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+          for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+      </script>
+      <!--Services-->
+      <div id="services">
+        <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="service-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Design</h2>
+              <p>
+                Showcase websites you've built, highlighting your skills in
+                front-end and back-end development, as well.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-pen"></i>
+              <h2>Graphics Design</h2>
+              <p>
+                This could involve logo design, branding, web design, or any
+                other visual design services you offer.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-blog"></i>
+              <h2>Content Writing</h2>
+              <p>
+                Display samples of your writing work, such as articles, blog
+                posts, website copy, marketing materials, or social media
+                content.
+              </p>
+              <a href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Protfolio-->
+      <div class="protfolio" id="protfolio1">
+        <h1 class="protfolio_title">My Protfolio</h1>
+        <div class="protfolio_tabs">
+          <p class="protfolio_link active_link" onclick="tab('Designing')">
+            Web Designing
+          </p>
+          <p class="protfolio_link" onclick="tab('Graphics')">
+            Graphics Design
+          </p>
+          <p class="protfolio_link" onclick="tab('Content')">Content Writing</p>
+        </div>
+        <div class="protfolio_content active_tab" id="Designing">
+          <img src="../image/ss.png" alt="" />
+          <img src="../image/ss1.png" alt="" />
+          <img src="../image/ss2.png" alt="" />
+        </div>
+        <div class="protfolio_content" id="Graphics">
+          <img src="../image/g1.jpeg" alt="" />
+          <img src="../image/g2.jpeg" alt="" />
+          <img src="../image/g3.jpeg" alt="" />
+        </div>
+        <div class="protfolio_content" id="Content">
+          <img src="../image/c1.jpeg" alt="" />
+          <img src="../image/c2.jpeg" alt="" />
+          <img src="../image/c3.jpeg" alt="" />
+        </div>
+      </div>
+      <script>
+        var links = document.getElementsByClassName("protfolio_link");
+        var contents = document.getElementsByClassName("protfolio_content");
+        function tab(tabname) {
+          for (tablink of links) {
+            tablink.classList.remove("active_link");
+          }
+          for (tabcontent of contents) {
+            tabcontent.classList.remove("active_tab");
+          }
+          event.currentTarget.classList.add("active_link");
+          document.getElementById(tabname).classList.add("active_tab");
+        }
+      </script>
+
+      <!--Scroll up---->
+      <a href="#" class="top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+
+      <script>
+        const toTop = document.querySelector(".top");
+        window.addEventListener("scroll",()=>{
+          if(window.pageYOffset>100){
+          toTop.classList.add("active");
+        }else{
+          toTop.classList.remove("active");
+        }
+        })
+      </script>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["FrontEnd Developer", "UI/UX Developer", "BCA Student"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
